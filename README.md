@@ -22,7 +22,15 @@ such as those for image recognition and data labeling.
 * Upload the complete Github repo with CircleCI to indicate that the code has been tested
 
 ---
-
+## Project Files
+* `.circleci/config.yml`: CircleCI config file
+* `app.py`: Flask app
+* `Dockerfile`: Build configuration
+* `Makefile`: Make commands
+* `run_docker.sh`: Build and run image locally
+* `upload_docker.sh`: Tag & push the image to DockerHub
+* `run_kubernetes.sh`: Create & run the pod on the K8s cluster
+---
 ## Setup the Environment
 
 * Create a virtualenv with Python 3.7 and activate it.
