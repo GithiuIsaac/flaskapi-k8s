@@ -1,18 +1,15 @@
 #!/usr/bin/env bash
 # This file tags and uploads an image to Docker Hub
 
-# Assumes that an image is built via `run_docker.sh`
+# The image is already built via `run_docker.sh`
 
-# Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+dockerpath="igithiu/flaskapi-ms:v1"
 
-# Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker tag flaskapi-ms:v1 ${dockerpath}
 
-# Step 3:
+# docker login - This should already be done and the current CLI authenticated on Docker
 # Push image to a docker repository
-docker tag python-helloworld igithiu/python-helloworld:v1.0.0
-
-docker push igithiu/python-helloworld:v1.0.0
+docker push ${dockerpath}

@@ -1,17 +1,13 @@
-## The Makefile includes instructions on environment setup and lint tests
-# Create and activate a virtual environment
-# Install dependencies in requirements.txt
-# Dockerfile should pass hadolint
-# app.py should pass pylint
 # (Optional) Build a simple integration test
 
+# Create and activate a virtual environment
 setup:
-	# Create python virtualenv & source it
-	# source ~/.devops/bin/activate
 	python3 -m venv ~/.devops
-
+	source ~/.devops/bin/activate
+	
+# Install dependencies in requirements.txt
 install:
-	# This should be run from inside a virtualenv
+	# This should be run from inside the virtualenv
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
@@ -19,12 +15,13 @@ test:
 	# Additional, optional, tests could go here
 	#python -m pytest -vv --cov=myrepolib tests/*.py
 	#python -m pytest --nbval notebook.ipynb
-
+	
+# Dockerfile should pass hadolint
+# app.py should pass pylint
 lint:
-	# See local hadolint install instructions:   https://github.com/hadolint/hadolint
-	# This is linter for Dockerfiles
+	# Linter for Dockerfiles
 	hadolint Dockerfile
-	# This is a linter for Python source code linter: https://www.pylint.org/
+	# Linter for Python source code
 	# This should be run from inside a virtualenv
 	pylint --disable=R,C,W1203,W1202 app.py
 
