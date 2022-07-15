@@ -7,9 +7,9 @@
 dockerpath="igithiu/flaskapi-ms:v1"
 
 # Authenticate & tag
+# docker login - This should already be done and the current CLI authenticated on Docker
 echo "Docker ID and Image: $dockerpath"
 docker tag flaskapi-ms:v1 ${dockerpath}
 
-# docker login - This should already be done and the current CLI authenticated on Docker
 # Push image to a docker repository
 docker push ${dockerpath}
