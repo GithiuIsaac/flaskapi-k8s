@@ -2,7 +2,7 @@
 
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/GithiuIsaac/flaskapi-k8s/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/GithiuIsaac/flaskapi-k8s/tree/main)
 
-**This project showcases the abilities to operationalize production microservices.**
+**This project showcases the abilities to operationalize production microservices.**  
 Operationalize a Machine Learning Microservice API given a pre-trained, `sklearn` model that has been trained
 to predict housing prices in Boston according to several features, such as average rooms in a home and data about 
 highway access, teacher-to-pupil ratios, and so on. 
