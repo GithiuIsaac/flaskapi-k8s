@@ -6,10 +6,10 @@
 dockerpath="igithiu/flaskapi-ms:v1"
 
 # Run the Docker Hub container with kubernetes
-kubectl create deploy flaskapi --image=$dockerpath --port=80 --labels app=flaskapi
+kubectl run flaskapi --image=$dockerpath --port=80
 
 # List kubernetes pods
 kubectl get pods
 
 # Forward the container port to a host
-kubectl port-forward flaskapi --address 0.0.0.0 8000:80
+kubectl port-forward flaskapi 8000:80
